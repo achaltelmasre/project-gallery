@@ -1,3 +1,84 @@
-h1{
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #8EC5FC;
+  background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+}
+.nav-bg{
+  background-color:  #aa80ff;
+}
+.heading{
+  color: black;
   text-align: center;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  margin-top: 40px;
+}
+
+.footer{
+    background-color: rgb(49, 46, 46);
+    width: 100%;
+    height: 200px;
+    margin-top: 50px;
+    text-align: center;
+     }
+.thank{
+    margin-top: 50px;
+    color: white;
+    
+    font-size: 50px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.game-container{
+  height: 500px;
+  width: 1200px;
+  border-radius: 15px;
+  border: 5px solid black;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-evenly;
+  background-image: url(./../img/ground.jpg);
+  background-size: cover;
+}
+.col1{
+  height: 400px;
+  width: 500px;
+  border: 3px solid black;
+  margin-top: 50px;
+  background-color: white;
+}
+.red-team{
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+  background-color: red;
+
+}
+.blue-team{
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+  background-color: rgb(25, 0, 255);
+
+}
+.score{
+  font-size: 200px;
+
+  text-align: center;
+  margin-top: -50px;
+}
+.score-btn{
+  background-color: #aa80ff;
+ width: 100px;
+ font-size: 30px;
+ margin-left: 100px;
+ margin-top: -50px;
+}
+.reset-btn{
+  width: 100px;
+  margin-left: 710px;
+  background-color: #aa80ff;
+  margin-top: 20px;
 }

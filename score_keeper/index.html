@@ -1,14 +1,146 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./css/keeperstyle.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 
-    <lin k> 
 </head>
+
 <body>
-    
+    <div>
+        <nav class="navbar navbar-expand-lg navbar-light nav-bg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><img src="./../img/prgallary.png" height="50px" width="120px"> </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active fw-bold" aria-current="page" href="./../index.html">Home</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link fw-bold" href="./../dice_roller/index.html">Dice Roller</a>
+                        </li>
+                        <div class="dropdown">
+
+                        </div>
+
+                        <li class="nav-item">
+                            <a class="nav-link fw-bold" href="./../bmi/index.html">BMI Calculator</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fw-bold" href="./../score_keeper/index.html">Score Keeper</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fw-bold" href="./../bulb_onoff/index.html">Bulb Magic</a>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="d-flex ">
+                    <button class="btn btn-outline-dark me-2">Sign in</button>
+                </div>
+                <div class="d-flex ">
+                    <button class="btn btn-outline-dark me-2">Register</button>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+
+    <h1 class="heading">Welcome To Score Keeper</h1>
+
+    <div class="game-container">
+
+        <div class="col1">
+            <p class="red-team">Red Team</p>
+            <p class="score" id="quantity0" id="clear">0</p>
+            <button type="button" class="score-btn" onclick="changeNum( 'increse' , 0)">+</button>
+            <button type="button" class="score-btn" onclick="changeNum('decrese', 0)">-</button>
+
+
+        </div>
+        <div class="col1">
+            <p class="blue-team">Blue Team</p>
+            <p class="score" id="quantity1">0</p>
+
+            <button type="button" class="score-btn" onclick="changeNum( 'increse' , 1)">+</button>
+            <button type="button" class="score-btn" onclick="changeNum('decrese', 1)">-</button>
+
+
+        </div>
+
+
+    </div>
+
+    <button type="button" class="reset-btn" onclick="reseet()">Reset</button>
+
+
+
+
+    <div class="footer">
+
+        <span class="thank">THANKS FOR VISIT PROJECT GALLARY.....!</span><br>
+        <p>😀😀😀😀😀😀😀😀</p>
+        <p>📽️📽️📽️📽️📽️</p>
+        <p>🧑‍🏫🧑‍🏫🧑‍🏫</p>
+
+    </div>
+
+    <script>
+
+        const arrno = [0, 1];
+        function changeNum(cardno, index) {
+
+            const numquant = document.getElementById(`quantity${index}`);
+
+            const score = arrno[index];
+
+            const prod = parseInt(numquant.innerText);
+            if (cardno == 'decrese' && score == 0) {
+
+                return
+            }
+            if (cardno == 'increse' && score == 11) {
+                alert('You Win The Match')
+
+                return
+            }
+            if (cardno == 'increse') {
+                arrno[index]++;
+
+            }
+            else {
+                arrno[index]--;
+            }
+
+            numquant.innerText = arrno[index];
+
+        }
+
+
+        function reseet() {
+            arrno[0] = 0;
+            arrno[1] = 0;
+            document.getElementById('quantity0').innerText = '0';
+            document.getElementById('quantity1').innerText = '0';
+        }
+    </script>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>
