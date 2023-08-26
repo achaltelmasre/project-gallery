@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="./css/bmistyle.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/style.css"/>
+    <style>
+      .head{
+        margin-left: 100px;
+      }
+    </style>
+
+
+    <title>BMI Calculator</title>
+  </head>
+  <body>
+
+    <div>
+      <nav class="navbar navbar-expand-lg navbar-light nav-bg">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><img src="./../img/prgallary.png" height="50px" width="120px"> </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active fw-bold" aria-current="page" href="../index.html">Home</a>
+              </li>
+  
+              <li class="nav-item">
+                <a class="nav-link fw-bold" href="../dice_roller/index.html">Dice Roller</a>
+              </li>
+              <div class="dropdown">
+  
+              </div>
+  
+              <li class="nav-item">
+                <a class="nav-link fw-bold" href="bmi">BMI Calculator</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fw-bold" href="./../score_keeper/index.html">Score Keeper</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fw-bold" href="./../bulb_onoff/index.html">Bulb Magic</a>
+              </li>
+  
+            </ul>
+          </div>
+          <div class="d-flex ">
+            <button class="btn btn-outline-dark me-2">Sign in</button>
+          </div>
+          <div class="d-flex ">
+            <button class="btn btn-outline-dark me-2">Register</button>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <h1 class="text-center display-4 m-2 title-container fw-bold" >
+      <img src="./assets/img/logo.png" class="img-responsive logo" />
+      BMI Calculator
+    </h1>
+
+     <h2 class="  head "> BMI Calculator</h2>
+     <h6 class=" head "> To Determine if you’re at a healthy weight, <br>
+      enter the following information and calculate your body mass index (BMI)
+    </h6>
+     <br />
+    <div class="container">
+
+      <div class="row">
+        <div class="col-md-6">
+          <form>
+            <label class="form-label">Enter your weight in Kg :</label>
+            <input type="text" placeholder="Weight in Kg" class="form-control" id="txt-weight"/>
+
+            <label  class="form-label mt-4">Enter your height in cm :</label>
+            <input type="text" placeholder="Height in cm" class="form-control" id="txt-height"/>
+            <br>
+
+            <input type="radio" name="gender" id="male" />
+            <label for="male" class="fw-bold">Male</label>
+      
+            <input type="radio" name="gender" id="female" />
+            <label for="female" class="fw-bold">Female</label>
+
+            <br>
+
+            <button type="button" class="btn btn-warning btn-lg w-45 mt-4 m-2" onClick="calculateBMI()">
+              Calculate
+            </button>
+
+            <button type="button" class="btn btn-warning btn-lg w-45 mt-4 m-2" onClick="resetBmi()">
+              Reset
+            </button>
+          </form>
+        </div>
+
+        <br/><br />
+        <div class="col-md-6 abc" >
+          <h1>Result : </h1>
+          <div id="abc">
+          
+          
+          <h2 class="text-center display-5" id="txt-bmi"></h2>
+
+          <h3 class="text-center display-6" id="txt-remark"></h3>
+
+          <p id="text">TIPS :
+
+          </p>
+
+
+          <div class="progress ">
+            <div class="progress-bar progress-bar-striped progress-bar-animated"
+             id="progress-remark"
+             role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+            </div>
+    
+          </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <div class="container mt-5">
+      <div class="row">
+
+        <div class="col-md-6">
+        <img src="./assets/img/bmi-img.jpg" height="350px">
+      </div>
+
+      <div class="col-md-6">
+      <h3>Tips to Maintain a Healthy Weight</h3>
+      <ul style="list-style-type:circle;" class="fs-5">
+        <li>Eat good foods. Foods high in sugar and calories lead to weight gain if you are not careful.</li>
+        <li>Drink more water. Drinking water, along with eating good foods and exercising daily, can help you to maintain a healthy weight.</li>
+        <li>Exercise daily.</li>
+        <li>Get more sleep.</li>
+        <li>Get more sleep.</li>
+        <li>Make a goal and stick to it.</li>
+
+      </ul>
+      </div>
+
+      </div>
+
+    </div>
+
+    <div class="footer">
+
+      <span class="thank">THANKS FOR VISIT PROJECT GALLARY.....!</span><br>
+      <p>😀😀😀😀😀😀😀😀</p>
+      <p>📽️📽️📽️📽️📽️</p>
+      <p>🧑‍🏫🧑‍🏫🧑‍🏫</p>
+
+  </div>
+
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <script src="./js/script.js"></script>
+
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
