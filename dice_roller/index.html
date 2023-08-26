@@ -1,13 +1,232 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>dice</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="./css/dicestyle.css">
+    <style>
+        .heading {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .main-container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 6%;
+        }
+
+        .imgdice {
+            height: 200px;
+        }
+
+        .btn1 {
+            height: 50px;
+            width: 160px;
+            background-color: #8EC5FC;
+            border-radius: 10px;
+            margin-top: 30PX;
+            margin-left: 20px;
+            font-size: 20px;
+            font-weight: 500;
+        }
+    </style>
+
 </head>
+
 <body>
-    
+
+    <div>
+        <nav class="navbar navbar-expand-lg navbar-light nav-bg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><img src="../img/prgallary.png" height="50px" width="120px"> </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active fw-bold" aria-current="page" href="#">Home</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link fw-bold" href="#">Dice Roller</a>
+                        </li>
+                        <div class="dropdown">
+
+                        </div>
+
+                        <li class="nav-item">
+                            <a class="nav-link fw-bold" href="#">BMI Calculator</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fw-bold" href="#">Score Keeper</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fw-bold" href="#">Bulb Magic</a>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="d-flex ">
+                    <button class="btn btn-outline-dark me-2">Sign in</button>
+                </div>
+                <div class="d-flex ">
+                    <button class="btn btn-outline-dark me-2">Register</button>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+
+
+
+    <h1 class="heading">Dice Roller!</h1>
+    <div class="main-container col-lg-12">
+
+        <div col-lg-5>
+            <img src="./img/dice-removebg-preview.png" id="dice" class="imgdice">
+            <br><br>
+            <button type="button" onclick="rolldice()" class=" btn1">
+                Roll the dice1
+            </button>
+        </div>
+        <div class="col-lg-2 ">
+            <img src="./img/ludo1-removebg-preview.png" height="200px">
+            <button type="button" onclick="rollBothDice()"  class=" btn1">
+                Roll the dice
+            </button>
+        </div>
+
+        <div col-lg-5>
+            <img src="./img/dice-removebg-preview.png" id="diceroller" class="imgdice">
+            <br><br>
+            <button type="button" onclick="rolldice2()" class=" btn1">
+                Roll the dice2
+            </button>
+        </div>
+
+
+    </div>
+    <div class="footer">
+
+        <span class="thank">THANKS FOR VISIT PROJECT GALLARY.....!</span><br>
+        <p>😀😀😀😀😀😀😀😀</p>
+        <p>📽️📽️📽️📽️📽️</p>
+        <p>🧑‍🏫🧑‍🏫🧑‍🏫</p>
+
+    </div>
+    <script>
+
+        function rolldice() {
+            const min = 1;
+            const max = 7;
+            const diceimg = document.getElementById("dice");
+            const randomnumber = Math.floor(Math.random() * (max - min)) + min;
+            switch (randomnumber) {
+                case 1:
+                    diceimg.src = "./img/one.png";
+                    break;
+
+
+                case 2:
+                    diceimg.src = "./img/two.png";
+                    break;
+                case 3:
+                    diceimg.src = "./img/3.png";
+                    break;
+                case 4:
+                    diceimg.src = "./img/four.png";
+                    break;
+                case 5:
+                    diceimg.src = "./img/five.png";
+                    break;
+                case 6:
+                    diceimg.src = "./img/sic.png";
+
+            }
+        }
+
+
+        function rolldice2() {
+            const min = 1;
+            const max = 7;
+            const diceimgElement = document.getElementById("diceroller");
+            const randomnumber1 = Math.floor(Math.random() * (max - min)) + min;
+            switch (randomnumber1) {
+                case 1:
+                    diceimgElement.src = "./img/one.png";
+                    break;
+                case 2:
+                    diceimgElement.src = "./img/two.png";
+                    break;
+                case 3:
+                    diceimgElement.src = "./img/3.png";
+                    break;
+                case 4:
+                    diceimgElement.src = "./img/four.png";
+                    break;
+                case 5:
+                    diceimgElement.src = "./img/five.png";
+                    break;
+                case 6:
+                    diceimgElement.src = "./img/sic.png";
+
+            }
+
+
+        }
+
+
+        function rollBothDice() {
+            const min = 1;
+            const max = 7;
+
+            const dice1Element = document.getElementById("dice");
+            const dice2Element = document.getElementById("diceroller");
+
+            const randomNumber1 = Math.floor(Math.random() * (max - min)) + min;
+            const randomNumber2 = Math.floor(Math.random() * (max - min)) + min;
+
+            updateDice(dice1Element, randomNumber1);
+            updateDice(dice2Element, randomNumber2);
+        }
+
+        function updateDice(diceElement, number) {
+            switch (number) {
+                case 1:
+                    diceElement.src = "./img/one.png";
+                    break;
+                case 2:
+                    diceElement.src = "./img/two.png";
+                    break;
+                case 3:
+                    diceElement.src = "./img/3.png";
+                    break;
+                case 4:
+                    diceElement.src = "./img/four.png";
+                    break;
+                case 5:
+                    diceElement.src = "./img/five.png";
+                    break;
+                case 6:
+                    diceElement.src = "./img/sic.png";
+                    break;
+            }
+        }
+
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+
 </body>
+
 </html>
