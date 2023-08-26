@@ -8,146 +8,161 @@
     <link rel="stylesheet" href="./css/buldstyle.css">
 </head>
 <style>
-    .bulb-main-img{
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .bulb-main-img {
+        background-color: white;
         margin: 60px;
-        margin-left: 370px;
+        margin-left: 430px;
         padding: 10px;
         padding-top: 5px;
         border: 1px solid gray;
         box-shadow: 3px 8px 4px gainsboro;
     }
-    .main-conntainer{
-        margin: 10px;
-        margin-left: 190px;
+
+    .main-container{
+        background-color: #8EC5FC;
+        height: 100vh;
     }
-     .warning{
-    background-color: yellow;
-   margin: 8px;
-   padding: 5px;
-   padding-left: 20px;
-   padding-right: 20px;
-   border-radius: 20px;
-   }
-   .danger{
-    background-color: tomato;
-    margin: 8px;
-    padding: 5px;
-   padding-left: 20px;
-   padding-right: 20px;
-   border-radius: 20px;
-   }
-   .info{
-    background-color: rgb(75, 105, 227);
-    margin: 8px;
-    padding: 5px;
-   padding-left: 20px;
-   padding-right: 20px;
-   border-radius: 20px;
-   }
-   .primary{
-    background-color: rgb(227, 37, 100);
-    margin: 8px;
-    padding: 5px;
-   padding-left: 20px;
-   padding-right: 20px;
-   border-radius: 20px;
-   }
-   .secondary{
-    background-color:green;
-    margin: 10px;
-    padding: 5px;
-   padding-left: 20px;
-   padding-right: 20px;
-   border-radius: 20px;
-   }
-   .bulbon{
-    margin: 10px;
-    padding: 5px;
-   padding-left: 20px;
-   padding-right: 20px;
-   border-radius: 20px;
-   position: relative;
-   }
-   .bulboff{
-    margin: 10px;
-    padding: 5px;
-   padding-left: 20px;
-   padding-right: 20px;
-   border-radius: 20px;
-   }
-   /* .main-img-container{
+
+    .main-container-btns {
+        margin: 10px;
+        margin-left: 250px;
+        margin-right: 300px;
+        background-color: #8EC5FC;
+    }
+
+    .warning {
+        background-color: yellow;
+        margin: 8px;
+        padding: 5px;
+        padding-left: 20px;
+        padding-right: 20px;
+        border-radius: 20px;
+    }
+
+    .danger {
+        background-color: tomato;
+        margin: 8px;
+        padding: 5px;
+        padding-left: 20px;
+        padding-right: 20px;
+        border-radius: 20px;
+    }
+
+    .info {
+        background-color: rgb(75, 105, 227);
+        margin: 8px;
+        padding: 5px;
+        padding-left: 20px;
+        padding-right: 20px;
+        border-radius: 20px;
+    }
+
+    .primary {
+        background-color: rgb(227, 37, 100);
+        margin: 8px;
+        padding: 5px;
+        padding-left: 20px;
+        padding-right: 20px;
+        border-radius: 20px;
+    }
+
+    .secondary {
+        background-color: green;
+        margin: 10px;
+        padding: 5px;
+        padding-left: 20px;
+        padding-right: 20px;
+        border-radius: 20px;
+    }
+
+    .bulbon {
+        margin: 10px;
+        padding: 5px;
+        padding-left: 20px;
+        padding-right: 20px;
+        border-radius: 20px;
+        position: relative;
+    }
+
+    .bulboff {
+        margin: 10px;
+        padding: 5px;
+        padding-left: 20px;
+        padding-right: 20px;
+        border-radius: 20px;
+    }
+
+    /* .main-img-container{
     height: 400px;
     width: 300px;
     border:1px solid black;
    } */
 </style>
-<body>
-    <div class="main-img-container">
-    <img src="./img/bulboff.png" id="bulb" height="300px" class="bulb-main-img"/>
-</div>
-    <br /><br />
-    <div class="main-conntainer">
-    <button type="button"class="bulbon" onclick="bulbOn()">
-       <b> On </b>
-    </button>
 
-<button type="button" class="warning"onclick="warning()">
-    warning
-</button>
-<button type="button" class="danger"onclick="danger()">
-    danger
-</button>
-<button type="button"class="info" onclick="info()">
-    info
-</button>
-<button type="button" class="primary"onclick="primary()">
-    primary
-</button>
-<button type="button" class="secondary"onclick="secondary()">
-    secondary
-</button>
-<button type="button"class="bulboff" onclick="bulbOff()">
-    Off
-</button>
-</div>
+<body>
+    <div class="main-container">
+        <div class="main-img-container">
+            <img src="./img/bulboff.png" id="bulb" height="300px" class="bulb-main-img" />
+        </div>
+        <br /><br />
+        <div class="main-container-btns">
+            <button type="button" class="bulbon" onclick="bulbOn()">
+                <b> On </b>
+            </button>
+
+            <button type="button" class="warning" onclick="warning()">
+                warning
+            </button>
+            <button type="button" class="danger" onclick="danger()">
+                danger
+            </button>
+            <button type="button" class="info" onclick="info()">
+                info
+            </button>
+            <button type="button" class="primary" onclick="primary()">
+                primary
+            </button>
+            <button type="button" class="secondary" onclick="secondary()">
+                secondary
+            </button>
+            <button type="button" class="bulboff" onclick="bulbOff()">
+                Off
+            </button>
+        </div>
+    </div>
 
     <script>
-           const bulbElement = document.getElementById('bulb');
-         
-        function bulbOn()
-        {
+        const bulbElement = document.getElementById('bulb');
+
+        function bulbOn() {
             bulbElement.src = "./img/warning.png"
         }
 
-        function bulbOff()
-        {
+        function bulbOff() {
             bulbElement.src = "./img/bulboff.png"
         }
-        function warning()
-        {
-            bulbElement.src = "./img/bulbon.png" 
+        function warning() {
+            bulbElement.src = "./img/bulbon.png"
         }
-        function danger()
-        {
-            bulbElement.src = "./img/danger.png" 
+        function danger() {
+            bulbElement.src = "./img/danger.png"
         }
-        function info()
-        {
-            bulbElement.src = "./img/info.png" 
+        function info() {
+            bulbElement.src = "./img/info.png"
         }
-        function primary()
-        {
-            bulbElement.src = "./img/primary.png" 
+        function primary() {
+            bulbElement.src = "./img/primary.png"
         }
-        function secondary()
-        {
-            bulbElement.src = "./img/secondary.png" 
+        function secondary() {
+            bulbElement.src = "./img/secondary.png"
         }
- 
- 
+
+
     </script>
 </body>
 
 </html>
-
-    
