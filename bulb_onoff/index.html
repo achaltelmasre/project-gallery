@@ -1,13 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
+    <title>Dom Manipulation</title>
     <link rel="stylesheet" href="./css/buldstyle.css">
 </head>
+<style>
+     .warning{
+    background-color: yellow;
+   }
+   .danger{
+    background-color: tomato;
+   }
+   .info{
+    background-color: aqua;
+   }
+   .primary{
+    background-color: blueviolet;
+   }
+   .secondary{
+    background-color: rgb(227, 37, 100);
+   }
+</style>
 <body>
     
+    <img src="./bulboff.png" id="bulb" height="200px" />
+    <br /><br />
+    <button type="button" onclick="bulbOn()">
+        On
+    </button>
+
+    <button type="button" onclick="bulbOff()">
+        Off
+    </button><br/><br/>
+
+<button type="button" onclick="warning()">
+    warning
+</button>
+<button type="button" onclick="danger()">
+    danger
+</button>
+<button type="button" onclick="info()">
+    info
+</button>
+<button type="button" onclick="primary()">
+    primary
+</button>
+<button type="button" onclick="secondary()">
+    secondary</button>
+    <script>
+           const bulbElement = document.getElementById('bulb');
+         
+        function bulbOn()
+        {
+            bulbElement.src = "bulbon.png"
+        }
+
+        function bulbOff()
+        {
+            bulbElement.src = "bulboff.png"
+        }
+        function danger()
+        {
+            bulbElement.src = "bulbon.png" 
+        }
+        function danger()
+        {
+            bulbElement.src = "bulbon.png" 
+        }
+        function danger()
+        {
+            bulbElement.src = "bulbon.png" 
+        }
+        function danger()
+        {
+            bulbElement.src = "bulbon.png" 
+        }
+        function danger()
+        {
+            bulbElement.src = "bulbon.png" 
+        }
+ 
+ 
+    </script>
 </body>
+
 </html>
+
+    
